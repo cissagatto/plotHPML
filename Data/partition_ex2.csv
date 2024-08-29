@@ -1,0 +1,7 @@
+"label", "partition-1","partition-2","partition-3","partition-4","partition-5","partition-6"
+label_1, 1,1,1,1,1,1
+label_2, 1,2,2,2,2,2
+label_3, 1,2,3,3,3,3
+label_4, 1,2,3,3,4,4
+label_5, 1,2,3,3,4,5
+label_6, 1,1,1,4,5,6

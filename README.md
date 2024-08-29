@@ -99,9 +99,14 @@ save.plot.hpml(df = partitions, partition_col = "cluster",
 The output will be a PDF file saved in the specified `FolderPlot` directory. The plot will show the clusters as circles, with labels grouped inside each cluster.
 
 
-## Contributing
+### Documentation
 
-We welcome contributions! If you find a bug or have a feature request, please open an issue on our GitHub page. You can also contribute by submitting a pull request.
+For more detailed documentation on each function, check out the `~/plotHPML/docs` folder
+
+
+## 📚 **Contributing**
+
+We welcome contributions from the community! If you have suggestions, improvements, or bug fixes, please submit a pull request or open an issue in the GitHub repository.
 
 
 ## Acknowledgment
@@ -109,8 +114,10 @@ We welcome contributions! If you find a bug or have a feature request, please op
 - This study was financed in part by the Conselho Nacional de Desenvolvimento Científico e Tecnológico - Brasil (CNPQ) - Process number 200371/2022-3.
 - The authors also thank the Brazilian research agencies FAPESP financial support.
 
-# Contact
-elainececiliagatto@gmail.com
+## 📧 **Contact**
+
+For any questions or support, please contact:
+- **Prof. Elaine Cecilia Gatto** (elainececiliagatto@gmail.com)
 
 # Links
 

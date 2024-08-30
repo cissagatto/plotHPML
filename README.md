@@ -1,6 +1,19 @@
 # Plot Hybrid Partitions for Multi-Label Classification
 
-This repository contains code for visualizing hybrid partitions, a method that plays a significant role in my PhD thesis. The code is designed to plot data partitions, specifically to highlight the differences between label clusters and instance clusters. However, it can be easily adapted to visualize any type of data partition.
+This repository contains code for visualizing hybrid partitions, a method that plays a significant role in my PhD thesis. The code is designed to plot label partitions, specifically to highlight the differences between label clusters and instance clusters. However, it can be easily adapted to visualize any type of data partition.
+
+## How to cite
+
+```plaintext
+@misc{plotHPML2024,
+  author = {Elaine Cecília Gatto},
+  title = {plotHPML: A package to plot label partitions},  
+  year = {2024},
+  note = {R package version 0.1.0. Licensed under CC BY-NC-SA 4.0},
+  doi = {DOI: 10.13140/RG.2.2.11938.44484},
+  url = {https://github.com/cissagatto/plotHPML}
+}
+```
 
 ## CSV Example
 
@@ -22,29 +35,15 @@ The input to the plotting functions is a CSV file formatted as follows:
 
 ## How to Use the Code
 
-### 1. Set Up the Workspace
+### 1. Package
 
-First, you need to define your workspace paths. The script includes variables for setting the root folder, script folder, data folder, and plots folder. Modify these paths according to your directory structure.
-
-```r
-# Define the root folder and subfolders
-FolderRoot <- "~/Plot_HPML"
-FolderScripts <- "~/Plot_HPML/R"
-FolderData <- "~/Plot_HPML/Data"
-FolderPlot <- "~/Plot_HPML/Plots"
-```
-
-### 2. Load the Required Scripts
-
-Set the working directory to the scripts folder and load the necessary libraries and functions:
+First, install and call the package plotHPML.
 
 ```r
-setwd(FolderScripts)
-source("libraries.R")
-source("plot_hpml.R")
+library(plotHPML)
 ```
 
-### 3. Plotting Hybrid Partitions
+### 2. Plotting Hybrid Partitions
 
 You can generate and save two types of plots for the hybrid partitions:
 
@@ -53,6 +52,7 @@ You can generate and save two types of plots for the hybrid partitions:
 To visualize multiple partitions in a heatmap format:
 
 ```r
+
 # Load the data for multiple partitions
 file.name <- paste(FolderData, "/partition_ex2.csv", sep = "")
 partitions <- data.frame(read.csv(file.name))
@@ -67,14 +67,15 @@ hpml.heatmap(df = partitions,
 ```
 
 
-<p align="center"><img src="https://github.com/cissagatto/Plot_HPML/blob/main/Plot/partition_ex2.png" width="640" height="360"/> </a>
+<p align="center"><img src="~/plotHPMLPlots/partition_ex2.png" width="640" height="360"/> </a>
 
 
 #### B. Hybrid Partition itself
 
-To visualize the hybrid partition:
+To visualize the hybrid partition see the example bellow. The `save.plot.hpml` function save the plot in a PDF format, but you can change that in the code if you want. The `plot.hpml` is the function that plot the partiton itsel.
 
 ```r
+
 # Load the data for a single partition
 file.name <- paste(FolderData, "/partition_ex1.csv", sep = "")
 partitions <- data.frame(read.csv(file.name))
@@ -101,7 +102,8 @@ The output will be a PDF file saved in the specified `FolderPlot` directory. The
 
 ### Documentation
 
-For more detailed documentation on each function, check out the `~/plotHPML/docs` folder
+For more detailed documentation on each function, check out the `~/plotHPML/docs`folder
+
 
 
 ## 📚 **Contributing**
@@ -118,8 +120,13 @@ We welcome contributions from the community! If you have suggestions, improvemen
 
 For any questions or support, please contact:
 - **Prof. Elaine Cecilia Gatto** (elainececiliagatto@gmail.com)
+  
 
 # Links
 
 | [Site](https://sites.google.com/view/professor-cissa-gatto) | [Post-Graduate Program in Computer Science](http://ppgcc.dc.ufscar.br/pt-br) | [Computer Department](https://site.dc.ufscar.br/) |  [Biomal](http://www.biomal.ufscar.br/) | [CNPQ](https://www.gov.br/cnpq/pt-br) | [Ku Leuven](https://kulak.kuleuven.be/) | [Embarcados](https://www.embarcados.com.br/author/cissa/) | [Read Prensa](https://prensa.li/@cissa.gatto/) | [Linkedin Company](https://www.linkedin.com/company/27241216) | [Linkedin Profile](https://www.linkedin.com/in/elainececiliagatto/) | [Instagram](https://www.instagram.com/cissagatto) | [Facebook](https://www.facebook.com/cissagatto) | [Twitter](https://twitter.com/cissagatto) | [Twitch](https://www.twitch.tv/cissagatto) | [Youtube](https://www.youtube.com/CissaGatto) |
 
+
+---
+
+**Happy Hybrid Partitions** 🎉

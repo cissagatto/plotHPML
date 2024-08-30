@@ -59,7 +59,19 @@
 <div class="section level1">
 <div class="page-header"><h1 id="plot-hybrid-partitions-for-multi-label-classification">Plot Hybrid Partitions for Multi-Label Classification<a class="anchor" aria-label="anchor" href="#plot-hybrid-partitions-for-multi-label-classification"></a>
 </h1></div>
-<p>This repository contains code for visualizing hybrid partitions, a method that plays a significant role in my PhD thesis. The code is designed to plot data partitions, specifically to highlight the differences between label clusters and instance clusters. However, it can be easily adapted to visualize any type of data partition.</p>
+<p>This repository contains code for visualizing hybrid partitions, a method that plays a significant role in my PhD thesis. The code is designed to plot label partitions, specifically to highlight the differences between label clusters and instance clusters. However, it can be easily adapted to visualize any type of data partition.</p>
+<div class="section level2">
+<h2 id="how-to-cite">How to cite<a class="anchor" aria-label="anchor" href="#how-to-cite"></a>
+</h2>
+<pre class="plaintext"><code>@misc{plotHPML2024,
+  author = {Elaine Cecília Gatto},
+  title = {plotHPML: A package to plot label partitions},
+  year = {2024},
+  note = {R package version 0.1.0. Licensed under CC BY-NC-SA 4.0},
+  doi = {DOI: 10.13140/RG.2.2.11938.44484},
+  url = {https://github.com/cissagatto/plotHPML}
+}</code></pre>
+</div>
 <div class="section level2">
 <h2 id="csv-example">CSV Example<a class="anchor" aria-label="anchor" href="#csv-example"></a>
 </h2>
@@ -110,27 +122,14 @@
 <h2 id="how-to-use-the-code">How to Use the Code<a class="anchor" aria-label="anchor" href="#how-to-use-the-code"></a>
 </h2>
 <div class="section level3">
-<h3 id="id_1-set-up-the-workspace">1. Set Up the Workspace<a class="anchor" aria-label="anchor" href="#id_1-set-up-the-workspace"></a>
+<h3 id="id_1-package">1. Package<a class="anchor" aria-label="anchor" href="#id_1-package"></a>
 </h3>
-<p>First, you need to define your workspace paths. The script includes variables for setting the root folder, script folder, data folder, and plots folder. Modify these paths according to your directory structure.</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Define the root folder and subfolders</span></span>
-<span><span class="va">FolderRoot</span> <span class="op">&lt;-</span> <span class="st">"~/Plot_HPML"</span></span>
-<span><span class="va">FolderScripts</span> <span class="op">&lt;-</span> <span class="st">"~/Plot_HPML/R"</span></span>
-<span><span class="va">FolderData</span> <span class="op">&lt;-</span> <span class="st">"~/Plot_HPML/Data"</span></span>
-<span><span class="va">FolderPlot</span> <span class="op">&lt;-</span> <span class="st">"~/Plot_HPML/Plots"</span></span></code></pre></div>
-</div>
-<div class="section level3">
-<h3 id="id_2-load-the-required-scripts">2. Load the Required Scripts<a class="anchor" aria-label="anchor" href="#id_2-load-the-required-scripts"></a>
-</h3>
-<p>Set the working directory to the scripts folder and load the necessary libraries and functions:</p>
+<p>First, install and call the package plotHPML.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">setwd</a></span><span class="op">(</span><span class="va">FolderScripts</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span><span class="st">"libraries.R"</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span><span class="st">"plot_hpml.R"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">plotHPML</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
-<h3 id="id_3-plotting-hybrid-partitions">3. Plotting Hybrid Partitions<a class="anchor" aria-label="anchor" href="#id_3-plotting-hybrid-partitions"></a>
+<h3 id="id_2-plotting-hybrid-partitions">2. Plotting Hybrid Partitions<a class="anchor" aria-label="anchor" href="#id_2-plotting-hybrid-partitions"></a>
 </h3>
 <p>You can generate and save two types of plots for the hybrid partitions:</p>
 <div class="section level4">
@@ -138,7 +137,8 @@
 </h4>
 <p>To visualize multiple partitions in a heatmap format:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Load the data for multiple partitions</span></span>
+<code class="sourceCode R"><span></span>
+<span><span class="co"># Load the data for multiple partitions</span></span>
 <span><span class="va">file.name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="va">FolderData</span>, <span class="st">"/partition_ex2.csv"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
 <span><span class="va">partitions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">file.name</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -151,14 +151,15 @@
 <span>             title <span class="op">=</span> <span class="st">"Partition example 2"</span><span class="op">)</span></span></code></pre></div>
 <p align="center">
 </p>
-<p><img src="https://github.com/cissagatto/Plot_HPML/blob/main/Plot/partition_ex2.png" width="640" height="360"></p>
+<p><img src="~/plotHPMLPlots/partition_ex2.png" width="640" height="360"></p>
 </div>
 <div class="section level4">
 <h4 id="b-hybrid-partition-itself">B. Hybrid Partition itself<a class="anchor" aria-label="anchor" href="#b-hybrid-partition-itself"></a>
 </h4>
-<p>To visualize the hybrid partition:</p>
+<p>To visualize the hybrid partition see the example bellow. The <code>save.plot.hpml</code> function save the plot in a PDF format, but you can change that in the code if you want. The <code>plot.hpml</code> is the function that plot the partiton itsel.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Load the data for a single partition</span></span>
+<code class="sourceCode R"><span></span>
+<span><span class="co"># Load the data for a single partition</span></span>
 <span><span class="va">file.name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="va">FolderData</span>, <span class="st">"/partition_ex1.csv"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
 <span><span class="va">partitions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">file.name</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
@@ -182,11 +183,17 @@
 </h3>
 <p>The output will be a PDF file saved in the specified <code>FolderPlot</code> directory. The plot will show the clusters as circles, with labels grouped inside each cluster.</p>
 </div>
+<div class="section level3">
+<h3 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
+</h3>
+<p>For more detailed documentation on each function, check out the <code>~/plotHPML/docs</code>folder</p>
+</div>
 </div>
 <div class="section level2">
-<h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
+<h2 id="id_-contributing">📚 <strong>Contributing</strong>
+<a class="anchor" aria-label="anchor" href="#id_-contributing"></a>
 </h2>
-<p>We welcome contributions! If you find a bug or have a feature request, please open an issue on our GitHub page. You can also contribute by submitting a pull request.</p>
+<p>We welcome contributions from the community! If you have suggestions, improvements, or bug fixes, please submit a pull request or open an issue in the GitHub repository.</p>
 </div>
 <div class="section level2">
 <h2 id="acknowledgment">Acknowledgment<a class="anchor" aria-label="anchor" href="#acknowledgment"></a>
@@ -197,17 +204,20 @@
 <li>The authors also thank the Brazilian research agencies FAPESP financial support.</li>
 </ul>
 </div>
+<div class="section level2">
+<h2 id="id_-contact">📧 <strong>Contact</strong>
+<a class="anchor" aria-label="anchor" href="#id_-contact"></a>
+</h2>
+<p>For any questions or support, please contact: - <strong>Prof. Elaine Cecilia Gatto</strong> (<a href="mailto:elainececiliagatto@gmail.com" class="email">elainececiliagatto@gmail.com</a>)</p>
 </div>
-<div class="section level1">
-<h1 id="contact">Contact<a class="anchor" aria-label="anchor" href="#contact"></a>
-</h1>
-<p><a href="mailto:elainececiliagatto@gmail.com" class="email">elainececiliagatto@gmail.com</a></p>
 </div>
 <div class="section level1">
 <h1 id="links">Links<a class="anchor" aria-label="anchor" href="#links"></a>
 </h1>
 <div class="line-block">
 <a href="https://sites.google.com/view/professor-cissa-gatto" class="external-link">Site</a> | <a href="http://ppgcc.dc.ufscar.br/pt-br" class="external-link">Post-Graduate Program in Computer Science</a> | <a href="https://site.dc.ufscar.br/" class="external-link">Computer Department</a> | <a href="http://www.biomal.ufscar.br/" class="external-link">Biomal</a> | <a href="https://www.gov.br/cnpq/pt-br" class="external-link">CNPQ</a> | <a href="https://kulak.kuleuven.be/" class="external-link">Ku Leuven</a> | <a href="https://www.embarcados.com.br/author/cissa/" class="external-link">Embarcados</a> | <a href="https://prensa.li/@cissa.gatto/" class="external-link">Read Prensa</a> | <a href="https://www.linkedin.com/company/27241216" class="external-link">Linkedin Company</a> | <a href="https://www.linkedin.com/in/elainececiliagatto/" class="external-link">Linkedin Profile</a> | <a href="https://www.instagram.com/cissagatto" class="external-link">Instagram</a> | <a href="https://www.facebook.com/cissagatto" class="external-link">Facebook</a> | <a href="https://twitter.com/cissagatto" class="external-link">Twitter</a> | <a href="https://www.twitch.tv/cissagatto" class="external-link">Twitch</a> | <a href="https://www.youtube.com/CissaGatto" class="external-link">Youtube</a> |</div>
+<hr>
+<p><strong>Happy Hybrid Partitions</strong> 🎉</p>
 </div>
 
   </div>
@@ -216,7 +226,7 @@
     <div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-3" class="external-link">GPL-3</a></li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0" class="external-link">CC BY-NC-SA 4.0</a></li>
 </ul>
 </div>
 

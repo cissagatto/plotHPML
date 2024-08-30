@@ -36,21 +36,58 @@
 ##############################################################################
 
 
+# rm(list=ls())
+
+
 
 ##############################################################################
-# WORKSPACE
+# WORKSPACE SETUP
 ##############################################################################
+
 FolderRoot <- "~/plotHPML"
 FolderScripts <- "~/plotHPML/R"
+FolderData <- "~/plotHPML/Data"
+FolderPlot <- "~/plotHPML/Plots"
 
 
 ##############################################################################
-# LIBRARIES
+# LOAD SCRIPTS AND LIBRARIES
 ##############################################################################
 
-library(ggplot2)
-library(reshape2)
-library(dplyr)
-library(ggforce)
-library(stringr)
+#setwd(FolderScripts)
+#source("libraries.R")
+#source("plot_hpml.R")
 
+library(plotHPML)
+
+
+##############################################################################
+# HYBRID PARTITIONS HEATMAP PLOT (for multiple partitions)
+##############################################################################
+
+file.name <- paste(FolderData, "/partition_ex2.csv", sep = "")
+partitions <- data.frame(read.csv(file.name))
+pdf.filename <- paste(FolderPlot, "/partition_ex2.pdf", sep = "")
+hpml.heatmap(df = partitions, pdf.filename = pdf.filename, title = "Partition example 2")
+
+
+
+
+##############################################################################
+# HYBRID PARTITION PLOT (for a single partition)
+##############################################################################
+
+file.name <- paste(FolderData, "/partition_ex1.csv", sep = "")
+partitions <- data.frame(read.csv(file.name))
+pdf.filename <- paste(FolderPlot, "/partition_ex1.pdf", sep = "")
+hpml.plot(df = partitions, partition_col = "cluster")
+hpml.save.plot(df = partitions, partition_col = "cluster", 
+                filename = pdf.filename, width = 8, height = 8, 
+                units = "in", dpi = 300)
+
+
+
+
+##############################################################################
+# END OF SCRIPT
+##############################################################################

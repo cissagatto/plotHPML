@@ -33,6 +33,16 @@ The input to the plotting functions is a CSV file formatted as follows:
 - The `label` column contains the labels that need to be visualized.
 - Ensure your CSV follows this structure for correct visualization. An example CSV file is provided in the repository for reference.
 
+## Instalation
+    
+```r
+# install.packages("devtools")
+library("devtools")
+devtools::install_github("https://github.com/cissagatto/plotHPML")
+library(plotHPML)
+```
+
+
 ## How to Use the Code
 
 ### 1. Package

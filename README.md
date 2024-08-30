@@ -67,7 +67,7 @@ hpml.heatmap(df = partitions,
 ```
 
 
-<p align="center"><img src="~/plotHPMLPlots/partition_ex2.png" width="640" height="360"/> </a>
+<p align="center"><img src="~/plotHPML/Plots/partition_ex2.png" width="640" height="360"/> </a>
 
 
 #### B. Hybrid Partition itself
@@ -92,7 +92,7 @@ save.plot.hpml(df = partitions, partition_col = "cluster",
                units = "in", dpi = 300)
 ```
 
-<p align="center"><img src="https://github.com/cissagatto/Plot_HPML/blob/main/Plot/partition_ex1.png" width="360" height="360"/> </a>
+<p align="center"><img src="~/plotHPML/Plots/partition_ex1.png" width="360" height="360"/> </a>
 
 
 ### 4. Output

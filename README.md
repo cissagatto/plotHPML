@@ -10,7 +10,7 @@ This repository contains code for visualizing hybrid partitions, a method that p
   title = {plotHPML: A package to plot label partitions},  
   year = {2024},
   note = {R package version 0.1.0. Licensed under CC BY-NC-SA 4.0},
-  doi = {DOI: 10.13140/RG.2.2.11938.44484},
+  doi = {10.13140/RG.2.2.11938.44484/1},
   url = {https://github.com/cissagatto/plotHPML}
 }
 ```

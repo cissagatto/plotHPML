@@ -109,10 +109,19 @@ save.plot.hpml(df = partitions, partition_col = "cluster",
 
 The output will be a PDF file saved in the specified `FolderPlot` directory. The plot will show the clusters as circles, with labels grouped inside each cluster.
 
-
 ### Documentation
 
-For more detailed documentation on each function, check out the `~/plotHPML/docs`folder
+For more detailed documentation on each function, check out the `~/WinTieLoss/docs` folder.
+A complete example is available in `~/WinTieLoss/example` folder.
+
+
+### Folder Structure
+
+Ensure the following folder structure is set up:
+
+- `FolderRoot`: Root directory of the project.
+- `FolderData`: Directory where CSV data files are stored.
+- `FolderResults`: Directory where results and plots are saved.
 
 
 

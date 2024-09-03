@@ -68,7 +68,7 @@
   title = {plotHPML: A package to plot label partitions},
   year = {2024},
   note = {R package version 0.1.0. Licensed under CC BY-NC-SA 4.0},
-  doi = {DOI: 10.13140/RG.2.2.11938.44484},
+  doi = {10.13140/RG.2.2.11938.44484/1},
   url = {https://github.com/cissagatto/plotHPML}
 }</code></pre>
 </div>
@@ -119,13 +119,22 @@
 </div>
 </div>
 <div class="section level2">
+<h2 id="instalation">Instalation<a class="anchor" aria-label="anchor" href="#instalation"></a>
+</h2>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># install.packages("devtools")</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/" class="external-link">"devtools"</a></span><span class="op">)</span></span>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"https://github.com/cissagatto/plotHPML"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">plotHPML</span><span class="op">)</span></span></code></pre></div>
+</div>
+<div class="section level2">
 <h2 id="how-to-use-the-code">How to Use the Code<a class="anchor" aria-label="anchor" href="#how-to-use-the-code"></a>
 </h2>
 <div class="section level3">
 <h3 id="id_1-package">1. Package<a class="anchor" aria-label="anchor" href="#id_1-package"></a>
 </h3>
 <p>First, install and call the package plotHPML.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">plotHPML</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level3">
@@ -136,7 +145,7 @@
 <h4 id="a-a-heatmap-for-multiple-partitions">A. A Heatmap for Multiple Partitions<a class="anchor" aria-label="anchor" href="#a-a-heatmap-for-multiple-partitions"></a>
 </h4>
 <p>To visualize multiple partitions in a heatmap format:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co"># Load the data for multiple partitions</span></span>
 <span><span class="va">file.name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="va">FolderData</span>, <span class="st">"/partition_ex2.csv"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
@@ -151,13 +160,13 @@
 <span>             title <span class="op">=</span> <span class="st">"Partition example 2"</span><span class="op">)</span></span></code></pre></div>
 <p align="center">
 </p>
-<p><img src="~/plotHPMLPlots/partition_ex2.png" width="640" height="360"></p>
+<p><img src="https://github.com/cissagatto/plotHPML/blob/main/Plots/partition_ex2.png" width="640" height="360"></p>
 </div>
 <div class="section level4">
 <h4 id="b-hybrid-partition-itself">B. Hybrid Partition itself<a class="anchor" aria-label="anchor" href="#b-hybrid-partition-itself"></a>
 </h4>
 <p>To visualize the hybrid partition see the example bellow. The <code>save.plot.hpml</code> function save the plot in a PDF format, but you can change that in the code if you want. The <code>plot.hpml</code> is the function that plot the partiton itsel.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span></span>
 <span><span class="co"># Load the data for a single partition</span></span>
 <span><span class="va">file.name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="va">FolderData</span>, <span class="st">"/partition_ex1.csv"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span></span>
@@ -175,7 +184,7 @@
 <span>               units <span class="op">=</span> <span class="st">"in"</span>, dpi <span class="op">=</span> <span class="fl">300</span><span class="op">)</span></span></code></pre></div>
 <p align="center">
 </p>
-<p><img src="https://github.com/cissagatto/Plot_HPML/blob/main/Plot/partition_ex1.png" width="360" height="360"></p>
+<p><img src="https://github.com/cissagatto/plotHPML/blob/main/Plots/partition_ex1.png" width="360" height="360"></p>
 </div>
 </div>
 <div class="section level3">
@@ -186,7 +195,20 @@
 <div class="section level3">
 <h3 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
 </h3>
-<p>For more detailed documentation on each function, check out the <code>~/plotHPML/docs</code>folder</p>
+<p>For more detailed documentation on each function, check out the <code>~/WinTieLoss/docs</code> folder. A complete example is available in <code>~/WinTieLoss/example</code> folder.</p>
+</div>
+<div class="section level3">
+<h3 id="folder-structure">Folder Structure<a class="anchor" aria-label="anchor" href="#folder-structure"></a>
+</h3>
+<p>Ensure the following folder structure is set up:</p>
+<ul>
+<li>
+<code>FolderRoot</code>: Root directory of the project.</li>
+<li>
+<code>FolderData</code>: Directory where CSV data files are stored.</li>
+<li>
+<code>FolderResults</code>: Directory where results and plots are saved.</li>
+</ul>
 </div>
 </div>
 <div class="section level2">
